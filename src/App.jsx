@@ -1,5 +1,7 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import Herosection from "./components/Herosection.jsx"
+import Favoritter from "./components/Favorittersection.jsx"
 import './App.css'
 
 function App() {
@@ -9,6 +11,9 @@ function App() {
     <>
       <Header />
       <main className="flex-grow-1">
+        <Herosection />
+        <Favoritter />
+
       </main>
       <Footer />
     </>

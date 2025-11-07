@@ -34,6 +34,73 @@ $offcanvas-horizontal-width: 200px;
   transform-origin: bottom left;
 }
 
+// hero section
+
+.hero-banner {
+  background-image: url("../assets/hamburger-fries.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  color: white;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); 
+  z-index: 1;
+}
+
+.text-box {
+  background-color: rgba(0, 0, 0, 0.55); /* semi-transparent background */
+  border-radius: 10px;
+  max-width: 550px;
+  margin-left: 3rem;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 80vh;
+  }
+
+  .text-box {
+    padding: 2rem;
+    max-width: 100%;
+  }
+}
+
+// favoritter
+.features-section {
+  background-color: #f8f9fa; /* light gray background */
+}
+
+.feature-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+
 
 $primary: #455d58;
 
