@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+//offcanvas styling
 $offcanvas-horizontal-width: 200px;
 
 .offcanvas {
@@ -10,6 +10,7 @@ $offcanvas-horizontal-width: 200px;
   background-color: #455d58 !important;
 }
 
+//linkhover effect
 .link-hover {
   display: inline-block;
   position: relative;
@@ -34,7 +35,7 @@ $offcanvas-horizontal-width: 200px;
   transform-origin: bottom left;
 }
 
-// hero section
+// hero section styling
 
 .hero-banner {
   background-image: url("../assets/hamburger-fries.png");
@@ -57,7 +58,7 @@ $offcanvas-horizontal-width: 200px;
 }
 
 .text-box {
-  background-color: rgba(0, 0, 0, 0.55); /* semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.55);
   border-radius: 10px;
   max-width: 550px;
   margin-left: 3rem;
@@ -74,21 +75,21 @@ $offcanvas-horizontal-width: 200px;
   }
 }
 
-// favoritter
+// favoritter styling
 .features-section {
   background-color: #f8f9fa; /* light gray background */
 }
 
 .feature-card {
-  border: none;
-  border-radius: 16px;
-  overflow: hidden;
+  border: 2px solid #455d58 !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20) !important;
 }
 
 .feature-card img {
@@ -97,7 +98,7 @@ $offcanvas-horizontal-width: 200px;
 }
 
 .card-body {
-  padding: 1.5rem;
+  padding: 1.5rem !important;
 }
 
 

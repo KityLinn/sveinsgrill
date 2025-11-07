@@ -21,7 +21,7 @@ export default function Favoritter() {
     },
     {
       img: middag,
-      title: "Feature Three",
+      title: "Middag",
       text: "Tradisjonell og god husmannskost",
       link: "#",
       gåtil: "gå til middager"
@@ -34,11 +34,11 @@ export default function Favoritter() {
       <Container>
         <Row className="g-4">
           {features.map((feature, index) => (
-            <Col key={index} md={4} sm={12}>
+            <Col key={index} lg={4} sm={12}>
               <Card className="feature-card h-100 text-center shadow-sm flex-fill">
                 <Card.Img variant="top" src={feature.img} alt={feature.title} />
                 <Card.Body>
-                  <Card.Title>{feature.title}</Card.Title>
+                  <Card.Title className="text-primary fw-bold">{feature.title}</Card.Title>
                   <Card.Text>{feature.text}</Card.Text>
                   <Button variant="primary" href={feature.link}>
                     {feature.gåtil}
