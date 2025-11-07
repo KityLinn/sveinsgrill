@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Phone, MapPin, Mail } from "lucide-react";
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="bg-primary text-white py-4 mt-5" id="footer">
       <Container>
