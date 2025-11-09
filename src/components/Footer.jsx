@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-primary text-white py-4 mt-5" id="footer">
       <Container>
-        <Row className="align-items-center g-5 g-md-3">
+        <Row className="align-items-center g-0 g-md-3">
           <Col xs={12} lg={6}  className="d-flex justify-content-center align-items-center gap-2 ms-auto flex-column">
             <a
               href=""

@@ -6,7 +6,7 @@ export function Favoritter() {
 
   return (
     <>
-     <section className="features-section py-5">
+     <section className="py-5">
       <Container>
         <h2>FAVORITTER</h2>
         <Row className="g-4">
