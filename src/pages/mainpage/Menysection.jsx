@@ -1,5 +1,5 @@
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { Clock, PartyPopper } from "lucide-react";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { menyer } from "../../data/menyer.jsx";
 
 export function Meny() {
   return (
@@ -8,46 +8,28 @@ export function Meny() {
         <Container>
           <h2>MENYER</h2>
           <Row className="g-5">
-            <Col xs={12} md={6}>
-              <div className="border-primary border border-3 row rounded">
-                <div
-                  className="col-3 d-flex align-items-center justify-content-center bg-primary"
-                  style={{ height: "130px" }}
-                >
-                  <Clock size={70} color="white" />
-                </div>
-                <div className="col-9 justify-content-center d-flex flex-column gap-2 ps-5">
-                  <div>
-                    <span className="text-primary-emphasis">
-                      Laget med omhu
-                    </span>
+            {menyer.map((menyer, index) => (
+              <Col key={index} xs={12} md={6}>
+                <div className="border-primary border border-3 row rounded d-flex flex-row">
+                  <div
+                    className="col-3 d-flex align-items-center justify-content-center bg-primary"
+                    style={{ height: "130px" }}
+                  >
+                    {menyer.icon}
                   </div>
-                  <div>
-                    <Button>OVERTIDSMAT</Button>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col xs={12} md={6}>
-              <div className=" border-primary border border-3 rounded align-items-center row">
-                <div
-                  className="col-3 d-flex align-items-center justify-content-center bg-primary"
-                  style={{ height: "130px" }}
-                >
-                  <PartyPopper size={70} color="white" />
-                </div>
-                <div className="col-9 justify-content-center d-flex flex-column gap-2 ps-5">
-                  <div>
-                    <span className="text-primary-emphasis">
-                      Mat til selskapet
-                    </span>
-                  </div>
-                  <div>
-                    <Button>CATERING</Button>
+                  <div className="col-9 justify-content-center d-flex flex-column gap-2 ps-5">
+                    <div>
+                      <span className="text-primary-emphasis">
+                        {menyer.text}
+                      </span>
+                    </div>
+                    <div>
+                      <Button href={menyer.link}>{menyer.button}</Button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            ))}
           </Row>
         </Container>
       </section>

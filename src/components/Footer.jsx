@@ -5,8 +5,8 @@ export function Footer() {
   return (
     <footer className="bg-primary text-white py-4 mt-5" id="footer">
       <Container>
-        <Row className="align-items-center g-3">
-          <Col xs={12} lg={6}  className="d-flex justify-content-center gap-2 ms-auto">
+        <Row className="align-items-center g-5 g-md-3">
+          <Col xs={12} lg={6}  className="d-flex justify-content-center align-items-center gap-2 ms-auto flex-column">
             <a
               href=""
               className="text-white text-decoration-none link-light d-flex flex-row gap-1"

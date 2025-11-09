@@ -7,7 +7,7 @@ export function Herosection() {
       <section className="hero-banner">
         <Container fluid className="h-100 align-items-center">
           <Row className="h-100 align-items-center">
-            <Col xs={6} className="text-box p-5">
+            <Col xs={10} md={5} className="text-box p-5">
               <h1 className="display-4 fw-bold text-white">Sveins grill</h1>
               <p className="text-white">Byens beste overtidsmat</p>
               <div className="d-flex flex-row gap-4">
