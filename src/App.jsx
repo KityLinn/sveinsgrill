@@ -1,5 +1,5 @@
 import { Layout } from "./components/Layout.jsx";
-import  { Mainpage } from "./pages/Mainpage.jsx"
+import  { Mainpage } from "./pages/mainpage/Mainpage.jsx"
 import './App.css'
 
 function App() {

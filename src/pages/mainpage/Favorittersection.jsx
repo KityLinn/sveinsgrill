@@ -1,5 +1,5 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { favoritterdata } from "../data/favoritterdata.jsx"
+import { favoritterdata } from "../../data/favoritterdata.jsx"
 
 export function Favoritter() {
 
