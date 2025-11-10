@@ -76,39 +76,17 @@ $offcanvas-horizontal-width: 200px;
   }
 }
 
-// favoritter styling
 
-.feature-card {
+//card styling
+
+.custom-card-styling {
   border: 2px solid #455d58 !important;
   border-radius: 16px !important;
   overflow: hidden !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20) !important;
-}
-
-.feature-card img {
-  height: 250px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 1.5rem !important;
-}
-
-//Meny styling
-
-.meny-card {
-  border: 2px solid #455d58 !important;
-  border-radius: 16px !important;
-  overflow: hidden !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.meny-card:hover {
+.custom-card-styling:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20) !important;
 }

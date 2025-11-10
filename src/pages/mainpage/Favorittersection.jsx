@@ -12,12 +12,12 @@ export function Favoritter() {
         <Row className="g-4">
           {favoritterdata.map((feature, index) => (
             <Col key={index} lg={4} sm={12}>
-              <Card className="feature-card h-100 text-center shadow-sm flex-fill">
-                <Card.Img variant="top" src={feature.img} alt={feature.title} />
+              <Card className="custom-card-styling h-100 text-center shadow-sm flex-fill">
+                <Card.Img variant="top" src={feature.img} alt={feature.title} style={{ height: "250px", objectFit: "cover" }} />
                 <Card.Body>
                   <Card.Title className="text-primary fw-bold">{feature.title}</Card.Title>
                   <Card.Text>{feature.text}</Card.Text>
-                  <Button variant="primary" href={feature.link}>
+                  <Button variant="primary" href={feature.link} className=" mt-auto">
                     {feature.gåtil}
                   </Button>
                 </Card.Body>

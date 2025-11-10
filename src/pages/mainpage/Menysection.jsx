@@ -10,7 +10,7 @@ export function Meny() {
           <Row className="gx-md-5 gy-sm-5">
             {menyer.map((menyer, index) => (
               <Col key={index} xs={12} md={6}>
-                <Row className="meny-card rounded">
+                <Row className="custom-card-styling rounded">
                   <Col
                     className="d-flex align-items-center justify-content-center col-3 bg-primary"
                     style={{ height: "130px" }}
