@@ -5,8 +5,8 @@ export function Footer() {
   return (
     <footer className="bg-primary text-white py-4 mt-5" id="footer">
       <Container>
-        <Row className="align-items-center g-0 g-md-3">
-          <Col xs={12} lg={6}  className="d-flex justify-content-center align-items-center gap-2 ms-auto flex-column">
+        <Row className="align-items-center gy-3 g-md-3">
+          <Col xs={12} lg={6}  className="d-flex justify-content-center align-items-center align-items-lg-baseline gap-3 ms-auto flex-column">
             <a
               href=""
               className="text-white text-decoration-none link-light d-flex flex-row gap-1"
@@ -29,7 +29,7 @@ export function Footer() {
               <span>Solheimsgaten 37,5054 Bergen</span>
             </a>
           </Col>
-          <Col xs={12} lg={6} className="text-center">
+          <Col xs={12} lg={6} className="text-center center">
             <p className="mb-0">Sveins Grill</p>
             <p className="mb-0">Org. nr.: 968 990 489</p>
           </Col>
