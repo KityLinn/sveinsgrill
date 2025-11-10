@@ -1,3 +1,4 @@
+import { Link, useNavigate } from "react-router-dom";
 import { Navbar, Nav, Container, Button, Offcanvas } from "react-bootstrap";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -11,31 +12,37 @@ export function Header() {
     <>
       <Navbar className="d-none d-lg-flex bg-primary">
         <div className=" d-flex flex-row justify-content-between w-100 px-4 align-items-center">
-          <Navbar.Brand href="#home">
-            <img src={logo} alt="" />
-          </Navbar.Brand>
-          <Nav className=" gap-4">
-            <Nav.Link href="#home" className="text-white link-hover">
+          <Link to="/">
+            <Navbar.Brand>
+              <img src={logo} alt="Sveins Grill" />
+            </Navbar.Brand>
+          </Link>
+          <Nav className="gap-4">
+            <Link to="/Overtidsmat" className="text-white link-hover nav-link">
               OVERTIDSMAT
-            </Nav.Link>
-            <Nav.Link href="#link" className="text-white link-hover">
+            </Link>
+            <Link to="/Catering" className="text-white link-hover nav-link">
               CATERING
-            </Nav.Link>
-            <Nav.Link href="#link" className="text-white link-hover">
+            </Link>
+            <Link to="/Grill" className="text-white link-hover nav-link">
               GRILL
-            </Nav.Link>
-            <Nav.Link href="#link" className="text-white link-hover">
+            </Link>
+            <Link to="/Catering" className="text-white link-hover nav-link">
               KONTAKT OSS
-            </Nav.Link>
+            </Link>
           </Nav>
           <Nav.Link href="#link" className="text-white">
             Last ned julemeny
           </Nav.Link>
         </div>
       </Navbar>
-
       <Navbar className="d-flex d-lg-none bg-primary">
-        <Container className="justify-content-end">
+        <Container className="justify-content-between">
+          <Link to="/">
+            <Navbar.Brand>
+              <img src={logo} alt="Sveins Grill" />
+            </Navbar.Brand>
+          </Link>
           <Button variant="light" onClick={handleShow} aria-label="open menu">
             <Menu size={24} />
           </Button>
@@ -55,18 +62,18 @@ export function Header() {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="flex-column">
-            <Nav.Link href="#home" className="text-white">
+            <Link to="/Overtidsmat" className="text-white link-hover nav-link">
               OVERTIDSMAT
-            </Nav.Link>
-            <Nav.Link href="#link" className="text-white">
+            </Link>
+            <Link to="/Catering" className="text-white link-hover nav-link">
               CATERING
-            </Nav.Link>
-            <Nav.Link href="#link" className="text-white">
+            </Link>
+            <Link to="/Grill" className="text-white link-hover nav-link">
               GRILL
-            </Nav.Link>
-            <Nav.Link href="#link" className="text-white">
+            </Link>
+            <Link to="/Catering" className="text-white link-hover nav-link">
               KONTAKT OSS
-            </Nav.Link>
+            </Link>
             <Nav.Link href="#link" className="text-white">
               Last ned julemeny
             </Nav.Link>
