@@ -7,7 +7,7 @@ export function Meny() {
       <section className="py-5">
         <Container>
           <h2>MENYER</h2>
-          <Row className="gx-md-5 gy-sm-5">
+          <Row className="gx-md-5 gy-5 mx-1">
             {menyer.map((menyer, index) => (
               <Col key={index} xs={12} md={6}>
                 <Row className="custom-card-styling rounded">
