@@ -1,10 +1,7 @@
 import { Container, Row, Col, Nav, Tab, ListGroup, Card } from 'react-bootstrap';
 import { UtensilsCrossed } from 'lucide-react';
-import { middagdata }  from "../../data/overtidsmatdata.jsx"
-import { hamburgerdata } from "../../data/overtidsmatdata.jsx"
-import { pizzadata } from '../../data/overtidsmatdata.jsx';
-import { category } from '../../data/overtidsmatdata.jsx';
-import { diversedata } from '../../data/overtidsmatdata.jsx';
+import { category, middagdata, hamburgerdata, pizzadata, diversedata}  from "../../data/overtidsmatdata.jsx"
+
 
 
 export function Matlisting() {
@@ -21,7 +18,7 @@ export function Matlisting() {
           </div>
           {/*Side navigation container*/}
           <Tab.Container defaultActiveKey="MIDDAG">
-            <Row className="g-4">
+            <Row className="g-3">
               <Col lg={2}>
                 <Nav variant="pills" className="flex-column gap-2">
                   {category.map((category) => (
@@ -37,20 +34,20 @@ export function Matlisting() {
                 {/*Middag data mapping*/}
                 <Tab.Content>
                   {middagdata.map((category) => (
-                    <Tab.Pane eventKey={category.navn} key={category.navn}>
+                    <Tab.Pane eventKey={category?.navn} key={category?.navn}>
                       <Row className="g-4">
                         {category.items.map((item, index) => (
                           <Col md={6} lg={4} key={index}>
                             <Card className="h-100 shadow-sm border-0">
                               <Card.Body>
-                                <Card.Title className="fw-bold text-dark">
-                                  {item.navn}
+                                <Card.Title className="fw-bold text-primary d-flex justify-content-between">
+                                  <span>{item?.navn}</span>
+                                  <span>
+                                    {item.pris?.toFixed(2)}kr
+                                  </span>
                                 </Card.Title>
                                 <div className="d-flex justify-content-between align-items-center mt-4">
-                                  <span className="fs-5">{item.info}</span>
-                                  <span className="text-primary fw-bold fs-5">
-                                    {item.pris.toFixed(2)}kr
-                                  </span>
+                                  <span className="fs-5">{item?.info}</span>
                                 </div>
                               </Card.Body>
                             </Card>
@@ -60,23 +57,26 @@ export function Matlisting() {
                     </Tab.Pane>
                   ))}
                   {/*burger data mapping*/}
-                  <Tab.Pane eventKey={hamburgerdata.navn} key={hamburgerdata.navn}>
+                  <Tab.Pane
+                    eventKey={hamburgerdata?.navn}
+                    key={hamburgerdata?.navn}
+                  >
                     <Row className="g-4">
                       {hamburgerdata.items.map((item, index) => (
                         <Col md={6} lg={4} key={index} className="mb-4">
                           <Card className="h-100 shadow-sm border-0">
                             <Card.Body>
-                              <Card.Title className="fw-bold text-center">
-                                {item.navn}
+                              <Card.Title className="fw-bold text-primary text-center">
+                                {item?.navn}
                               </Card.Title>
                               <ul className="list-unstyled mt-3">
                                 {item.info.map((option, i) => (
                                   <li
                                     key={i}
-                                    className="d-flex justify-content-between border-bottom py-1"
+                                    className="d-flex justify-content-between border-bottom py-1 fw-bold"
                                   >
-                                    <span>{option.gram}g</span>
-                                    <span>{option.pris} kr</span>
+                                    <span>{option?.gram}g</span>
+                                    <span>{option?.pris} kr</span>
                                   </li>
                                 ))}
                               </ul>
@@ -87,23 +87,23 @@ export function Matlisting() {
                     </Row>
                   </Tab.Pane>
                   {/*piza data mapping*/}
-                  <Tab.Pane eventKey={pizzadata.navn} key={pizzadata.navn}>
+                  <Tab.Pane eventKey={pizzadata?.navn} key={pizzadata?.navn}>
                     <Row className="g-4">
                       {pizzadata.items.map((item, index) => (
                         <Col md={6} lg={4} key={index} className="mb-4">
                           <Card className="h-100 shadow-sm border-0">
                             <Card.Body>
-                              <Card.Title className="fw-bold text-center">
-                                {item.navn}
+                              <Card.Title className="fw-bold text-primary text-center">
+                                {item?.navn}
                               </Card.Title>
                               <ul className="list-unstyled mt-3">
                                 {item.info.map((option, i) => (
                                   <li
                                     key={i}
-                                    className="d-flex justify-content-between py-1"
+                                    className="d-flex justify-content-between py-1 fw-bold text-uppercase"
                                   >
-                                    <span>{option.størrelse}</span>
-                                    <span>{option.pris} kr</span>
+                                    <span>{option?.størrelse}</span>
+                                    <span>{option?.pris} kr</span>
                                   </li>
                                 ))}
                               </ul>
@@ -115,20 +115,19 @@ export function Matlisting() {
                   </Tab.Pane>
                   {/*diverse data mapping*/}
                   {diversedata.map((category) => (
-                    <Tab.Pane eventKey={category.navn} key={category.navn}>
+                    <Tab.Pane eventKey={category?.navn} key={category?.navn}>
                       <Row className="g-4">
                         {category.items.map((item, index) => (
                           <Col md={6} lg={4} key={index}>
                             <Card className="h-100 shadow-sm border-0">
                               <Card.Body>
-                                <Card.Title className="fw-bold text-dark">
-                                  {item.navn}
+                                <Card.Title className="fw-bold text-primary d-flex justify-content-between">
+                                  <span>{item?.navn}</span>
+                                  <span>{item?.pris.toFixed(2)}kr</span>
                                 </Card.Title>
                                 <div className="d-flex justify-content-between align-items-center mt-4">
-                                  <span className="fs-5">{item.info}</span>
-                                  <span className="text-primary fw-bold fs-5">
-                                    {item.pris.toFixed(2)}kr
-                                  </span>
+                                  <span className="fs-5">{item?.info}</span>
+
                                 </div>
                               </Card.Body>
                             </Card>

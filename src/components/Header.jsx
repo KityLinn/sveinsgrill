@@ -18,16 +18,16 @@ export function Header() {
             </Navbar.Brand>
           </Link>
           <Nav className="gap-4">
-            <Link to="/Overtidsmat" className="text-white link-hover nav-link">
+            <Link to="/overtidsmat" className="text-white link-hover nav-link">
               OVERTIDSMAT
             </Link>
-            <Link to="/Catering" className="text-white link-hover nav-link">
+            <Link to="/catering" className="text-white link-hover nav-link">
               CATERING
             </Link>
-            <Link to="/Grill" className="text-white link-hover nav-link">
+            <Link to="/grill" className="text-white link-hover nav-link">
               GRILL
             </Link>
-            <Link to="/Catering" className="text-white link-hover nav-link">
+            <Link to="/catering" className="text-white link-hover nav-link">
               KONTAKT OSS
             </Link>
           </Nav>
@@ -62,16 +62,16 @@ export function Header() {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="flex-column">
-            <Link to="/Overtidsmat" className="text-white link-hover nav-link">
+            <Link to="/overtidsmat" className="text-white link-hover nav-link">
               OVERTIDSMAT
             </Link>
-            <Link to="/Catering" className="text-white link-hover nav-link">
+            <Link to="/catering" className="text-white link-hover nav-link">
               CATERING
             </Link>
-            <Link to="/Grill" className="text-white link-hover nav-link">
+            <Link to="/grill" className="text-white link-hover nav-link">
               GRILL
             </Link>
-            <Link to="/Catering" className="text-white link-hover nav-link">
+            <Link to="/catering" className="text-white link-hover nav-link">
               KONTAKT OSS
             </Link>
             <Nav.Link href="#link" className="text-white">
