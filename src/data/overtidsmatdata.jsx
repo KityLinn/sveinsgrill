@@ -64,7 +64,7 @@ export const middagdata = [
     navn: "PIZZA",
     items: [
       {
-        navn: "skinke",
+        navn: "Skinke",
         info: [
           { størrelse: 'medium', pris: 125 },
           { størrelse: 'stor', pris: 190 },

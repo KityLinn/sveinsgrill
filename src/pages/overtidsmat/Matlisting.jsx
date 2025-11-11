@@ -6,7 +6,6 @@ import { pizzadata } from '../../data/overtidsmatdata.jsx';
 import { category } from '../../data/overtidsmatdata.jsx';
 import { diversedata } from '../../data/overtidsmatdata.jsx';
 
-console.log(hamburgerdata.navn)
 
 export function Matlisting() {
   return (
@@ -17,13 +16,13 @@ export function Matlisting() {
           <div className="mb-5 text-center">
             <div className="d-flex align-items-center justify-content-center gap-3 mb-3">
               <UtensilsCrossed size={40} className="text-primary" />
-              <h1 className="display-4 m-0">Vår meny</h1>
+              <h2 className="display-4 m-0">Vår meny</h2>
             </div>
           </div>
           {/*Side navigation container*/}
           <Tab.Container defaultActiveKey="MIDDAG">
             <Row className="g-4">
-              <Col lg={3}>
+              <Col lg={2}>
                 <Nav variant="pills" className="flex-column gap-2">
                   {category.map((category) => (
                     <Nav.Item key={category}>
@@ -34,7 +33,7 @@ export function Matlisting() {
                   ))}
                 </Nav>
               </Col>
-              <Col lg={9}>
+              <Col lg={10}>
                 {/*Middag data mapping*/}
                 <Tab.Content>
                   {middagdata.map((category) => (
@@ -42,7 +41,7 @@ export function Matlisting() {
                       <Row className="g-4">
                         {category.items.map((item, index) => (
                           <Col md={6} lg={4} key={index}>
-                            <Card className="h-100 shadow-sm border-0 hover-card">
+                            <Card className="h-100 shadow-sm border-0">
                               <Card.Body>
                                 <Card.Title className="fw-bold text-dark">
                                   {item.navn}
@@ -64,8 +63,8 @@ export function Matlisting() {
                   <Tab.Pane eventKey={hamburgerdata.navn} key={hamburgerdata.navn}>
                     <Row className="g-4">
                       {hamburgerdata.items.map((item, index) => (
-                        <Col md={4} key={index} className="mb-4">
-                          <Card className="h-100 shadow-sm">
+                        <Col md={6} lg={4} key={index} className="mb-4">
+                          <Card className="h-100 shadow-sm border-0">
                             <Card.Body>
                               <Card.Title className="fw-bold text-center">
                                 {item.navn}
@@ -91,8 +90,8 @@ export function Matlisting() {
                   <Tab.Pane eventKey={pizzadata.navn} key={pizzadata.navn}>
                     <Row className="g-4">
                       {pizzadata.items.map((item, index) => (
-                        <Col md={4} key={index} className="mb-4">
-                          <Card className="h-100 shadow-sm">
+                        <Col md={6} lg={4} key={index} className="mb-4">
+                          <Card className="h-100 shadow-sm border-0">
                             <Card.Body>
                               <Card.Title className="fw-bold text-center">
                                 {item.navn}
@@ -101,7 +100,7 @@ export function Matlisting() {
                                 {item.info.map((option, i) => (
                                   <li
                                     key={i}
-                                    className="d-flex justify-content-between border-bottom py-1"
+                                    className="d-flex justify-content-between py-1"
                                   >
                                     <span>{option.størrelse}</span>
                                     <span>{option.pris} kr</span>
@@ -120,7 +119,7 @@ export function Matlisting() {
                       <Row className="g-4">
                         {category.items.map((item, index) => (
                           <Col md={6} lg={4} key={index}>
-                            <Card className="h-100 shadow-sm border-0 hover-card">
+                            <Card className="h-100 shadow-sm border-0">
                               <Card.Body>
                                 <Card.Title className="fw-bold text-dark">
                                   {item.navn}
