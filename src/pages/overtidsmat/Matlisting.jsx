@@ -60,7 +60,34 @@ export function Matlisting() {
                       </Row>
                     </Tab.Pane>
                   ))}
-                  {/*Middag data mapping*/}
+                  {/*burger data mapping*/}
+                  <Tab.Pane eventKey={hamburgerdata.navn} key={hamburgerdata.navn}>
+                    <Row className="g-4">
+                      {hamburgerdata.items.map((item, index) => (
+                        <Col md={4} key={index} className="mb-4">
+                          <Card className="h-100 shadow-sm">
+                            <Card.Body>
+                              <Card.Title className="fw-bold text-center">
+                                {item.navn}
+                              </Card.Title>
+                              <ul className="list-unstyled mt-3">
+                                {item.info.map((option, i) => (
+                                  <li
+                                    key={i}
+                                    className="d-flex justify-content-between border-bottom py-1"
+                                  >
+                                    <span>{option.gram}g</span>
+                                    <span>{option.pris} kr</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                      ))}
+                    </Row>
+                  </Tab.Pane>
+                  {/*piza data mapping*/}
                   <Tab.Pane eventKey={pizzadata.navn} key={pizzadata.navn}>
                     <Row className="g-4">
                       {pizzadata.items.map((item, index) => (
@@ -87,6 +114,7 @@ export function Matlisting() {
                       ))}
                     </Row>
                   </Tab.Pane>
+                  {/*diverse data mapping*/}
                   {diversedata.map((category) => (
                     <Tab.Pane eventKey={category.navn} key={category.navn}>
                       <Row className="g-4">
