@@ -27,7 +27,7 @@ export function Header() {
             <Link to="/grill" className="text-white link-hover nav-link">
               GRILL
             </Link>
-            <Link to="/catering" className="text-white link-hover nav-link">
+            <Link to="/kontakt" className="text-white link-hover nav-link">
               KONTAKT OSS
             </Link>
           </Nav>
