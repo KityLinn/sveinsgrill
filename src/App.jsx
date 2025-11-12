@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Layout } from "./components/Layout.jsx";
 import { Index } from "./pages/index/Index.jsx";
 import { Overtidsmat } from "./pages/overtidsmat/Overtidsmat.jsx";
-import { Catering } from "./pages/catering/catering.jsx";
+import { Catering } from "./pages/catering/Catering.jsx";
 import "./App.css";
 
 function App() {
