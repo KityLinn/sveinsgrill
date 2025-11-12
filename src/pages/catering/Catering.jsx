@@ -1,5 +1,5 @@
-import { Herosection } from "./Herosection";
-import { CateringListing } from "./Cateringlisting";
+import { Herosection } from "./Herosection.jsx";
+import { CateringListing } from "./CateringListing.jsx";
 
 export function Catering() {
   return (
