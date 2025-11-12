@@ -17,7 +17,7 @@ export function OvertidsmatListing() {
             </div>
           </div>
           {/*Side navigation container*/}
-          <Tab.Container defaultActiveKey="HOVEDRETTER">
+          <Tab.Container defaultActiveKey="MIDDAG">
             <Row className="g-3">
               <Col lg={2}>
                 <Nav variant="pills" className="flex-column gap-2">
