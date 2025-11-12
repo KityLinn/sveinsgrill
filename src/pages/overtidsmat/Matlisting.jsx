@@ -4,7 +4,7 @@ import { category, middagdata, hamburgerdata, pizzadata, diversedata}  from "../
 
 
 
-export function Matlisting() {
+export function OvertidsmatListing() {
   return (
     <>
       {/*Title*/}
@@ -17,7 +17,7 @@ export function Matlisting() {
             </div>
           </div>
           {/*Side navigation container*/}
-          <Tab.Container defaultActiveKey="MIDDAG">
+          <Tab.Container defaultActiveKey="HOVEDRETTER">
             <Row className="g-3">
               <Col lg={2}>
                 <Nav variant="pills" className="flex-column gap-2">

@@ -58,6 +58,25 @@ $offcanvas-horizontal-width: 200px;
   z-index: 1;
 }
 
+.catering-banner {
+    background-image: url("../assets/catering-bergen.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  position: relative;
+  color: white;
+}
+.catering-banner::after {
+    content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); 
+  z-index: 1;
+}
+
 .text-box {
   background-color: rgba(0, 0, 0, 0.55);
   border-radius: 10px;

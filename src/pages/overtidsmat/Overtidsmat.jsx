@@ -1,11 +1,11 @@
 import { Herosection } from "./Herosection";
-import { Matlisting } from "./Matlisting";
+import { OvertidsmatListing } from "./Matlisting";
 
 export function Overtidsmat() {
   return (
     <>
         <Herosection />
-        <Matlisting />
+        <OvertidsmatListing />
     </>
   );
 }
